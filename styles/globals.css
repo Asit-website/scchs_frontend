@@ -4752,7 +4752,7 @@ justify-content: center !important;
 .scchs_header {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 23px;
   max-width: 1720px;
   margin: auto;
@@ -4762,8 +4762,10 @@ justify-content: center !important;
 .scchs_ul {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin-bottom: 0px;
   gap: 23px;
+  width: 100%;
 }
 
 .scchs_ul li {
@@ -4780,6 +4782,7 @@ justify-content: center !important;
   font-size: 14.5px;
   text-transform: uppercase !important;
   color: rgba(255, 255, 255, 1) !important;
+  cursor: pointer;
 }
 
 .scchs_searchbar form {
@@ -4791,7 +4794,8 @@ justify-content: center !important;
 
 .scchs_searchbar input {
   padding: 10px 20px;
-  width: 100%;
+  /* width: 100%; */
+  width: 400px;
   border-radius: 5px;
   color: rgba(5, 16, 29, 1);
   font-family: "Euclid-Regular";
@@ -4828,7 +4832,8 @@ justify-content: center !important;
 .scchs_nav_ul {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  width: 100%;
   gap: 48px;
   margin-bottom: 0px;
 }
@@ -4951,4 +4956,17 @@ justify-content: center !important;
 }
 .test_drop1 .tyino:hover p{
   color: white !important;
+}
+
+@media only screen and (min-width:1440px){
+  .scchs_ul{
+    justify-content: space-between;
+  }
+  .scchs_ul a{
+    padding-right: 25px;
+    white-space: nowrap;
+  }
+  .scchs_searchbar input{
+    width: 300px;
+  }
 }

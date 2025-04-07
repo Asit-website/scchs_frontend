@@ -510,10 +510,7 @@ export default function Navbar(props) {
               <li>
                 <a>Contact us</a>
               </li>
-
-
-            </ul>
-            <div className="scchs_searchbar">
+              <div className="scchs_searchbar">
               <form>
                 <input placeholder="Search" name="search" />
                 <button><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -522,15 +519,23 @@ export default function Navbar(props) {
                 </button>
               </form>
             </div>
+
+            </ul>
+
+            {/* ===========yaha pe ayega===== */}
+          
           </div>
         </div>
 
         <div className="scchs_navbar_up">
           <div className="scchs_navbar">
+            {/* <div className="scchs_logo">
+              <img src="https://res.cloudinary.com/dgif730br/image/upload/v1743768420/SCCHS_Logo_vFINAL_1_1_whtysx.svg" alt="" />
+            </div> */}
+            <ul className="scchs_nav_ul">
             <div className="scchs_logo">
               <img src="https://res.cloudinary.com/dgif730br/image/upload/v1743768420/SCCHS_Logo_vFINAL_1_1_whtysx.svg" alt="" />
             </div>
-            <ul className="scchs_nav_ul">
               <div className="schss_parent" onClick={handleDropdownToggle} ref={dropdownRef}>
                 <li className="dev_svg">
                   <a>About us</a>
@@ -638,7 +643,7 @@ export default function Navbar(props) {
         </div >
 
         {/* ipad mobile  */}
-        {/* <div className="IpAD" onScroll={changeNavBg}>
+         {/* <div className="IpAD" onScroll={changeNavBg}>
           <header
             id={`${navBg ? "lower" : "lower_head"}`}
             className={style.header}
@@ -1361,7 +1366,7 @@ export default function Navbar(props) {
               ""
             )}
           </header>
-        </div> */}
+        </div>  */}
 
       </>
     );
