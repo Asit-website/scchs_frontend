@@ -26,6 +26,7 @@ export default function Navbar(props) {
   const { boolValue } = props;
 
   const [countCart, setCountCart] = useState(0);
+  // const [isOpen, setIsOpen] = useState(false);
   const [authPopup, setAuthPopup] = useState(false);
   const [authPopup1, setAuthPopup1] = useState(false)
   const refAuthPopup = useRef(null);
@@ -43,7 +44,35 @@ export default function Navbar(props) {
   });
 
 
+  //  ==============dropdown ref=============
 
+  const [isOpen, setIsOpen] = useState(false);
+  const buttonRef = useRef(null);
+  const dropdownRef11 = useRef(null);
+
+  const handleToggle = () => {
+    setIsOpen(prev => !prev);
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        dropdownRef11.current &&
+        !dropdownRef11.current.contains(event.target) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(event.target)
+      ) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  // ============dropdown==============
 
 
   useEffect(() => {
@@ -350,8 +379,11 @@ export default function Navbar(props) {
       // setIsDropdownOpen3(false);
       // setIsDropdownOpen4(false);
       // setIsDropdownOpen5(false)
-      setIsDropdownOpen7(true);
+      setIsDropdownOpen7((prev) => !prev);
     };
+
+
+
     return (
       <>
         {/* desktop view  */}
@@ -359,30 +391,109 @@ export default function Navbar(props) {
         <div className="scchs_header_up">
           <div className="scchs_header">
             <ul className="scchs_ul">
-              <div className="schss_parent" onClick={handleDropdownToggle7} ref={dropdownRef7}>
+              {/* <div className="schss_parent" onClick={handleToggle} ref={buttonRef}>
                 <li className="dev_svg">
                   <a>Members only</a>
-                  {isDropdownOpen7 &&
-                    <svg width="10" height="6" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M5.66016 7.19531L0.328125 1.89062C0.0820312 1.61719 0.0820312 1.20703 0.328125 0.960938L0.957031 0.332031C1.20312 0.0859375 1.61328 0.0859375 1.88672 0.332031L6.125 4.54297L10.3359 0.332031C10.6094 0.0859375 11.0195 0.0859375 11.2656 0.332031L11.8945 0.960938C12.1406 1.20703 12.1406 1.61719 11.8945 1.89062L6.5625 7.19531C6.31641 7.44141 5.90625 7.44141 5.66016 7.19531Z" fill="#292929" />
+                  {isOpen && (
+                    <svg
+                      width="10"
+                      height="6"
+                      viewBox="0 0 13 8"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M5.66016 7.19531L0.328125 1.89062C0.0820312 1.61719 0.0820312 1.20703 0.328125 0.960938L0.957031 0.332031C1.20312 0.0859375 1.61328 0.0859375 1.88672 0.332031L6.125 4.54297L10.3359 0.332031C10.6094 0.0859375 11.0195 0.0859375 11.2656 0.332031L11.8945 0.960938C12.1406 1.20703 12.1406 1.61719 11.8945 1.89062L6.5625 7.19531C6.31641 7.44141 5.90625 7.44141 5.66016 7.19531Z"
+                        fill="white"
+                      />
                     </svg>
-                  }
-
+                  )}
                 </li>
-                {isDropdownOpen7 &&
-                  <div className="test_drop1">
-                    <div><p>Membership List</p></div>
+
+                {isOpen && (
+                  <div ref={dropdownRef11} className="test_drop1">
+                    <div>
+                      <p>Membership List</p>
+                    </div>
                     <div>
                       <p>SCCHS Publications Archives</p>
                     </div>
-                    <div><p>My Profile</p></div>
-                    <div><p>Logout</p></div>
+                    <div>
+                      <p>My Profile</p>
+                    </div>
+                    <div>
+                      <p>Logout</p>
+                    </div>
                     <span>
-                    <div><p>Research</p></div>
-                    <div><p>Cemetery Records</p></div>
+                      <div>
+                        <p>Research</p>
+                      </div>
+                      <div>
+                        <p>Cemetery Records</p>
+                      </div>
                     </span>
                   </div>
-                }
+                )}
+              </div> */}
+              <div className="schss_parent">
+                {/* Only this button toggles */}
+                <li className="dev_svg" onClick={handleToggle} ref={buttonRef}>
+                  <a>Members only</a>
+                  {isOpen && (
+                    <svg
+                      width="10"
+                      height="6"
+                      viewBox="0 0 13 8"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M5.66016 7.19531L0.328125 1.89062C0.0820312 1.61719 0.0820312 1.20703 0.328125 0.960938L0.957031 0.332031C1.20312 0.0859375 1.61328 0.0859375 1.88672 0.332031L6.125 4.54297L10.3359 0.332031C10.6094 0.0859375 11.0195 0.0859375 11.2656 0.332031L11.8945 0.960938C12.1406 1.20703 12.1406 1.61719 11.8945 1.89062L6.5625 7.19531C6.31641 7.44141 5.90625 7.44141 5.66016 7.19531Z"
+                        fill="white"
+                      />
+                    </svg>
+                  )}
+                </li>
+
+                {/* Dropdown appears separately, not wrapped in toggle */}
+                {isOpen && (
+                  <div ref={dropdownRef11} className="test_drop1">
+                    <div><p>Membership List</p></div>
+                    <div onClick={handleDropdownToggle7} ref={dropdownRef7} className="tyino">
+                      <p>SCCHS Publications Archives</p>
+                      {isDropdownOpen7 &&
+                        <svg
+                          width="10"
+                          height="6"
+                          viewBox="0 0 13 8"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M5.66016 7.19531L0.328125 1.89062C0.0820312 1.61719 0.0820312 1.20703 0.328125 0.960938L0.957031 0.332031C1.20312 0.0859375 1.61328 0.0859375 1.88672 0.332031L6.125 4.54297L10.3359 0.332031C10.6094 0.0859375 11.0195 0.0859375 11.2656 0.332031L11.8945 0.960938C12.1406 1.20703 12.1406 1.61719 11.8945 1.89062L6.5625 7.19531C6.31641 7.44141 5.90625 7.44141 5.66016 7.19531Z"
+                            fill="white"
+                          />
+                        </svg>
+                      }
+                      {
+                        isDropdownOpen7 &&
+
+                        <span className="newsLetter_why">
+                          <ol>
+                            <li>Membership Newsletters</li>
+                            <li>SCCHS Genealogy Newsletters</li>
+                          </ol>
+                        </span>
+                      }
+                    </div>
+                    <div><p>My Profile</p></div>
+                    <div className="logout"><p>Logout</p></div>
+                    <span>
+                      <div><p>Research</p></div>
+                      <div><p>Cemetery Records</p></div>
+                    </span>
+                  </div>
+                )}
               </div>
               <li>
                 <a>Archives</a>

@@ -20,22 +20,27 @@ body {
   overflow-x: hidden;
   top: 0px !important;
 }
+
 @font-face {
   font-family: "Euclid-Light";
   src: url("../public/eculid/Euclid\ Circular\ A\ Light.ttf");
 }
+
 @font-face {
   font-family: "Euclid-Regular";
   src: url("../public/eculid/Euclid\ Circular\ A\ Regular.ttf");
 }
+
 @font-face {
   font-family: "Euclid-Medium";
   src: url("../public/eculid/Euclid\ Circular\ A\ Medium.ttf");
 }
+
 @font-face {
   font-family: "Euclid-Semibold";
   src: url("../public/eculid/Euclid\ Circular\ A\ SemiBold.ttf");
 }
+
 @font-face {
   font-family: "Euclid-Bold";
   src: url("../public/eculid/Euclid\ Circular\ A\ Bold.ttf");
@@ -2940,7 +2945,8 @@ button {
   height: 100%;
   max-height: 100%;
 }
-.footer_para p{
+
+.footer_para p {
   color: rgba(8, 13, 23, 1);
   font-weight: 400;
   font-size: 16px;
@@ -2949,6 +2955,7 @@ button {
   width: 15em;
   max-width: 100%;
 }
+
 .quick {
   margin-left: 15px;
 }
@@ -3013,15 +3020,18 @@ button {
   text-decoration: none;
   line-height: 26px;
 }
-.lopl li span{
+
+.lopl li span {
   font-family: "Euclid-Medium";
   color: rgba(0, 49, 92, 1);
 }
-.tues  a{
+
+.tues a {
   color: rgba(8, 13, 23, 1);
   font-family: "Euclid-Medium" !important;
 }
-.lopl li p{
+
+.lopl li p {
   color: rgba(0, 49, 92, 1);
   font-family: "Euclid-Light";
   font-size: 18px;
@@ -3029,7 +3039,8 @@ button {
   border-left: 1px solid rgba(0, 49, 92, 1);
   padding: 0px 3px;
 }
-.lopl li .closed{
+
+.lopl li .closed {
   color: rgba(171, 6, 53, 1);
   font-family: "Euclid-Light";
   font-size: 18px;
@@ -3037,19 +3048,23 @@ button {
   padding: 0px 3px;
   border-left: 1px solid rgba(171, 6, 53, 1);
 }
-.sung{
+
+.sung {
   font-family: "Euclid-Light" !important;
   color: rgba(8, 13, 23, 1) !important;
 }
-.archieve_text p{
+
+.archieve_text p {
   color: rgba(8, 13, 23, 1);
   font-family: "Euclid-Light";
   font-size: 18px;
 }
-.archieve_text span{
+
+.archieve_text span {
   font-weight: 500;
   font-family: "Euclid-Medium" !important;
 }
+
 /* .lopl1 a{
   white-space: nowrap;
 } */
@@ -3057,9 +3072,11 @@ button {
   width: 24px;
   height: 24px;
 }
-.lopl img{
+
+.lopl img {
   width: auto;
 }
+
 .site-button {
   width: 124px;
   height: 34px;
@@ -3152,6 +3169,7 @@ button {
   width: 170px;
   max-width: 100%;
 }
+
 @media (max-width:1350px) {
   .rwing3 {
     /* max-width: 100% !important; */
@@ -4756,7 +4774,7 @@ justify-content: center !important;
   /* padding: 0px 20px; */
 }
 
-.scchs_ul  a {
+.scchs_ul a {
   text-decoration: none;
   font-family: "Euclid-Medium" !important;
   font-size: 14.5px;
@@ -4791,11 +4809,13 @@ justify-content: center !important;
 .scchs_searchbar button svg {
   width: 20px;
 }
-.scchs_navbar{
+
+.scchs_navbar {
   background-color: rgba(255, 255, 255, 1);
   position: relative;
 }
-.scchs_navbar{
+
+.scchs_navbar {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4804,27 +4824,32 @@ justify-content: center !important;
   margin: auto;
   padding: 10px 60px;
 }
-.scchs_nav_ul{
+
+.scchs_nav_ul {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 48px;
   margin-bottom: 0px;
 }
-.scchs_nav_ul li{
+
+.scchs_nav_ul li {
   list-style: none;
 }
-.scchs_nav_ul a{
+
+.scchs_nav_ul a {
   text-decoration: none;
   font-family: "Euclid-Medium" !important;
   font-size: 14.5px;
   text-transform: uppercase;
   color: rgba(41, 41, 41, 1) !important;
 }
-.scchs_logo img{
+
+.scchs_logo img {
   width: 130px;
 }
-.test_sign button{
+
+.test_sign button {
   background-color: rgba(0, 49, 92, 1) !important;
   color: rgba(255, 255, 255, 1);
   font-family: "Euclid-Medium" !important;
@@ -4833,45 +4858,97 @@ justify-content: center !important;
   padding: 8px 30px;
   border-radius: 5px;
 }
-.dev_svg{
+
+.dev_svg {
   display: flex;
   align-items: center;
   gap: 2.5px;
 }
-.schss_parent{
+
+.schss_parent {
   cursor: pointer;
 }
-.test_drop{
+
+.test_drop {
   background-color: rgba(0, 49, 92, 1);
   position: absolute;
   top: 87px;
   padding: 8px 0px;
 }
-.test_drop1{
+
+.test_drop1 {
   background-color: rgba(0, 49, 92, 1);
   position: absolute;
   top: 69px;
   padding: 8px 0px;
   z-index: 1;
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
-.test_drop div, .test_drop1 div{
+
+.test_drop div,
+.test_drop1 div {
   margin: 12px 0px;
   padding: 5px 25px;
   margin-right: 15px;
 }
-.test_drop div:hover, .test_drop1 div:hover{
-   background-color: rgba(255, 255, 255, 1);
-   cursor: pointer;
+
+.test_drop div:hover,
+.test_drop1 div:hover {
+  background-color: rgba(255, 255, 255, 1);
+  cursor: pointer;
 }
-.test_drop p, .test_drop1 p{
+
+.test_drop p,
+.test_drop1 p {
   color: rgba(255, 255, 255, 1);
   font-size: 18.5px;
   font-family: "Euclid-Regular";
   margin-bottom: 0px;
   cursor: pointer;
 }
-.test_drop div:hover p, .test_drop1 div:hover p{
+
+.test_drop div:hover p,
+.test_drop1 div:hover p {
   color: rgba(41, 41, 41, 1);
+}
+
+.newsLetter_why {
+  margin: 0px !important;
+  padding: 0px !important;
+  margin-right: 0px !important;
+  position: absolute;
+  overflow: hidden;
+  margin-top: 5px !important;
+}
+
+.newsLetter_why li {
+  /* padding: 0px !important; */
+  border-right: none !important;
+  color: rgba(255, 255, 255, 1);
+  font-size: 14.5px;
+  padding: 3px 5px !important;
+  font-family: "Euclid-Light";
+  list-style-type: disc !important;
+}
+
+.tyino {
+  position: relative;
+}
+
+.tyino svg {
+  position: absolute;
+  right: 10px;
+  top: 16px;
+}
+
+.logout {
+  position: relative;
+  top: 35px;
+}
+.test_drop1 .tyino:hover{
+  background-color: initial !important;
+}
+.test_drop1 .tyino:hover p{
+  color: white !important;
 }
