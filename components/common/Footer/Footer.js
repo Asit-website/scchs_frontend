@@ -9,7 +9,7 @@ export default function Footer(footerProps) {
 
     const footerData = footerProps.footerProps;
 
-    console.log(footerData.footer_logo);
+    // console.log(footerData.footer_logo);
 
     let footerItems = null;
     console.log(footerItems)
@@ -98,8 +98,8 @@ export default function Footer(footerProps) {
         >
           <div className="footer-top">
             <div className="container amrgin-left10px">
-
-              <div className="row rwing ">
+            {/* row */}
+              <div className="rwing ">
 
                 <div className="rwing1">
                   <div className="widget widget_getintuch" height="240px">
